@@ -8,6 +8,7 @@ import {
     Icon28NewsfeedOutline, Icon28ServicesOutline,
 } from "@vkontakte/icons";
 import {NEWS_PANEL, SERVICE_PANEL, SETTINGS_PANEL} from "../constants";
+import PropTypes from 'prop-types';
 
 const tabItems = [
     {panelId: NEWS_PANEL, Icon: Icon28NewsfeedOutline, label: 'Новости' },
@@ -31,3 +32,8 @@ export const Tabbar = ({activePanel, changePanels}) => (
                 ) )}
             </TabbarComponent>
 )
+
+Tabbar.propTypes = {
+    activePanel:PropTypes.string,
+    changePanels: PropTypes.func,
+};
